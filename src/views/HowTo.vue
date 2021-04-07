@@ -1,96 +1,176 @@
 <template>
-<v-stepper v-model="e1">
-    <v-stepper-header>
-      <v-stepper-step
-        :complete="e1 > 1"
-        step="1"
-      >
-        Name of step 1
-      </v-stepper-step>
+  <v-stepper
+    v-model="e6"
+    vertical
+  >
+    <v-stepper-step
+      :complete="e6 > 1"
+      step="1"
+    >
+      Add Task a Task and press Enter/Confirm
+      <small>Tap or click the input field to get started</small>
+    </v-stepper-step>
 
-      <v-divider></v-divider>
+    <v-stepper-content step="1">
+<v-container fill-height>
+    <v-row justify="center" align="center">
+        <v-col cols="12" sm="8">
 
-      <v-stepper-step
-        :complete="e1 > 2"
-        step="2"
-      >
-        Name of step 2
-      </v-stepper-step>
-
-      <v-divider></v-divider>
-
-      <v-stepper-step step="3">
-        Name of step 3
-      </v-stepper-step>
-    </v-stepper-header>
-
-    <v-stepper-items>
-      <v-stepper-content step="1">
         <v-card
           class="mb-12"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 2"
-        >
-          Continue
-        </v-btn>
-
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-
-      <v-stepper-content step="2">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="400px"
-        ></v-card>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 3"
-        >
-          Continue
-        </v-btn>
-
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-
-      <v-stepper-content step="3">
-        <v-card
-          class="mb-12"
-          color="grey lighten-1"
-          height="400px"
+          color="white"
+         height="150%"
+          width="500px"
+          align="center"
+          justify="center"
         >
       <v-img
-      width="400px"
-      height="100%"
-      src="header-1200.gif"
+          class="mb-12 height:100% width:auto"
+
+      src="step1.gif"
     ></v-img>
         
         </v-card>
 
-        <v-btn
-          color="primary"
-          @click="e1 = 1"
+        </v-col>
+    </v-row>
+</v-container>
+      <v-btn
+        color="primary"
+        @click="e6 = 2"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step
+      :complete="e6 > 2"
+      step="2"
+    >
+      To add A Subtask, Select The Task That The Subtask Will Be Under
+      <small>Tap And highlight The task You Want To add</small> 
+    </v-stepper-step>
+
+    <v-stepper-content step="2">
+<v-container fill-height>
+    <v-row justify="center" align="center">
+        <v-col cols="12" sm="8">
+
+        <v-card
+          class="mb-12"
+          color="white"
+         height="150%"
+          width="500px"
+          align="center"
+          justify="center"
         >
-          Continue
-        </v-btn>
+      <v-img
+          class="mb-12 height:100% width:auto"
 
-        <v-btn text>
-          Cancel
-        </v-btn>
-      </v-stepper-content>
-    </v-stepper-items>
+      src="step2.gif"
+    ></v-img>
+        
+        </v-card>
+
+        </v-col>
+    </v-row>
+</v-container>
+      <v-btn
+        color="primary"
+        @click="e6 = 3"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step
+      :complete="e6 > 3"
+      step="3"
+    >
+      Once Selected, Type In The Name Of The Subtask and Press Enter/Confirm
+      <small>Make Sure the Task is Selected</small> 
+    </v-stepper-step>
+
+    <v-stepper-content step="3">
+      <v-container fill-height>
+    <v-row justify="center" align="center">
+        <v-col cols="12" sm="8">
+
+        <v-card
+          class="mb-12"
+          color="white"
+         height="150%"
+          width="500px"
+          align="center"
+          justify="center"
+        >
+      <v-img
+          class="mb-12 height:100% width:auto"
+
+      src="step3.gif"
+    ></v-img>
+        
+        </v-card>
+
+        </v-col>
+    </v-row>
+</v-container>
+      <v-btn
+        color="primary"
+        @click="e6 = 4"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step step="4">
+    Once You Complete The Task, Press The Toggle To The Left To Finish It 
+    <small>Subtask Will Need To Be Completed To Finish The Main Task</small> 
+    </v-stepper-step>
+    <v-stepper-content step="4">
+<v-container fill-height>
+    <v-row justify="center" align="center">
+        <v-col cols="12" sm="8">
+
+        <v-card
+          class="mb-12"
+          color="white"
+            height="150%"
+          width="500px"
+          align="center"
+          justify="center"
+        >
+      <v-img
+          class="mb-12 height:100% width:auto"
+
+      src="step4.gif"
+    ></v-img>
+        
+        </v-card>
+
+        </v-col>
+    </v-row>
+</v-container>
+      <v-btn
+        color="primary"
+        @click="e6 = 1"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
   </v-stepper>
-
 </template>
 
 
@@ -99,7 +179,7 @@
   export default {
     data () {
       return {
-        e1: 1,
+        e6: 1,
       }
     },
   }
